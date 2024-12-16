@@ -9,6 +9,7 @@ import Profile from "./components/User.jsx";
 import LoginForm from "./components/Loginform.jsx";
 import TodoList from "./components/ToDoList.jsx";
 import ShoppingList from "./components/ShoppingList.jsx";
+import MyApplic from "./components/New.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,7 @@ function App() {
         <TodoList />
         <LoginForm />
         <ShoppingList />
+        <MyApplic />
       <h1>Vite + React +++ </h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
