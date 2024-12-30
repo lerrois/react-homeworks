@@ -2,15 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-// import MyButton from "./components/Button.jsx";
-import MyApp from "./components/Button.jsx";
-import AboutPage from "./components/About.jsx";
-import Profile from "./components/User.jsx";
-import LoginForm from "./components/Loginform.jsx";
+
+// import { Picture } from "./components/Button.jsx";
+import List from "./components/List.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
+    const items = [
+        {key:1, urla:'../images/smile1.jpg'},
+        {key:2, urla:'../images/smile2.jpg'}
+    ]
   return (
     <>
       <div>
@@ -21,11 +22,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <MyApp />
-        <AboutPage />
-        <Profile />
-        <LoginForm />
-      <h1>Vite + React +++ </h1>
+      <List items={ items } />
+      {/*<Picture items={ items } />*/}
+      <h1> </h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
