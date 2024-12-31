@@ -4,6 +4,7 @@ class List extends React.Component {
 
     state = {
         count: {},
+        result: null
     };
 
     handleCountChange = (e) => {
@@ -28,19 +29,19 @@ class List extends React.Component {
                 max_key = i;
             }
         }
-        console.log(max_key, count);
         const res = items.filter( item => {
             return item.key === parseInt(max_key)
         })[0];
         const el = document.getElementById('imgRes');
         const new_element = document.createElement('img');
         new_element.src = res.urla;
+        new_element.className = "smiles"
         el.appendChild(new_element);
     }
 
     render () {
         const { items } = this.props;
-        const liSmiles = items.map(item => <img src={item.urla} data-key={item.key} key={item.key} onClick={this.handleCountChange}/>)
+        const liSmiles = items.map(item => <img className="smiles" src={item.urla} data-key={item.key} key={item.key} onClick={this.handleCountChange}/>)
         return (
             <div>
                 {liSmiles}

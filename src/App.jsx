@@ -9,8 +9,8 @@ import List from "./components/List.jsx";
 function App() {
   const [count, setCount] = useState(0);
     const items = [
-        {key:1, urla:'../images/smile1.jpg'},
-        {key:2, urla:'../images/smile2.jpg'}
+        {key:1, urla:'../src/images/smile1.jpg'},
+        {key:2, urla:'../src/images/smile2.jpg'}
     ]
   return (
     <>
